@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: pomelo-cas-client
+Implementation-Version: 2.1.4.RELEASE
+Built-By: Administrator
+Implementation-Vendor-Id: pomelo
+Build-Jdk: 1.8.0_101
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/pomelo-cas-client
+Created-By: Maven Integration for Eclipse
+

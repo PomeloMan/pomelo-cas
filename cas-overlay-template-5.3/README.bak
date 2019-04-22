@@ -1,0 +1,29 @@
+#Reference: https://github.com/apereo/cas-overlay-template/tree/5.3
+
+#build.cmd run
+
+
+
+
+
+
+## 问题1
+未认证授权的服务
+CAS的服务记录是空的，没有定义服务。 希望通过CAS进行认证的应用程序必须在服务记录中明确定义。
+
+Application Not Authorized to Use CAS
+
+You are not authorized to access the application as your account \
+is missing privileges required by the CAS server to authenticate into this service. Please notify your support desk.
+
+The application you attempted to authenticate to is not authorized to use CAS. Contact your CAS administrator to learn how you might register and integrate your application with CAS.
+
+The services registry of CAS is empty and has no service definitions. \
+Applications that wish to authenticate with CAS must explicitly be defined in the services registry.
+
+## 解决方案
+\WEB-INF\classes\services\HTTPSandIMAPS-10000001.json
+"serviceId" : "^(https|imaps)://.*" => "serviceId" : "^(https|http|imaps)://.*"
+\WEB-INF\classes\application.properties
+cas.tgc.secure=false
+cas.serviceRegistry.initFromJson=true
